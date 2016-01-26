@@ -1,4 +1,4 @@
-Requirements
+*Requirements*
 
 *Read the github terms of service and privacy policy.
 *Create a github account.
