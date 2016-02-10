@@ -1,0 +1,26 @@
+import math
+def add(a, b):
+	return a + b
+print add(3, 4)
+def sub(a, b):
+	return a - b
+print sub(5, 3)
+def mul(a, b):
+	return a * b
+print mul(4, 4)
+def div(a ,b):
+	return float(a) / b
+print div(2, 3)
+def hours_from_seconds(a):
+	return a/3600
+print hours_from_seconds(86400)
+def area_circle(r):
+	return math.pi*r**2
+print area_circle(5)
+def sphere_volume(r):
+	return (r**3)*math.pi*4/3
+print sphere_volume(5)
+def avg_volume(a, b):
+	return ((((a/2)**3)*math.pi*4/3)+(((b/2)**3)*math.pi*4/3))/2
+print avg_volume(10, 20)
+
