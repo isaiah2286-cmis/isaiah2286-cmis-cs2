@@ -23,4 +23,9 @@ print sphere_volume(5)
 def avg_volume(a, b):
 	return ((((a/2)**3)*math.pi*4/3)+(((b/2)**3)*math.pi*4/3))/2
 print avg_volume(10, 20)
-
+def area(a, b, c):
+	x = (a + b + c)/2
+	return math.sqrt(x*(x-a)*(x-b)*(x-c))
+print area(1, 2, 2.5)
+def right_align(a)
+	return
