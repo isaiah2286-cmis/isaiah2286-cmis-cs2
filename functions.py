@@ -27,5 +27,18 @@ def area(a, b, c):
 	x = (a + b + c)/2
 	return math.sqrt(x*(x-a)*(x-b)*(x-c))
 print area(1, 2, 2.5)
-def right_align(a)
-	return
+def right_align(a):
+	return " "*80+a
+print right_align("hello")
+def center(a):
+	return " "*40+a
+print center("hello")
+def msg_box(a):
+	y = "--" + "-"*len(a) + "--"
+	return"""
++{}+
+|  {}  |
++{}+""".format(y, a, y)
+
+print msg_box("hello")
+print msg_box("I eat cats!")
