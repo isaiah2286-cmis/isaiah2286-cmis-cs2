@@ -1,44 +1,86 @@
 import math
 def add(a, b):
 	return a + b
-print add(3, 4)
+
 def sub(a, b):
 	return a - b
-print sub(5, 3)
+
 def mul(a, b):
 	return a * b
-print mul(4, 4)
+
 def div(a ,b):
 	return float(a) / b
-print div(2, 3)
+
 def hours_from_seconds(a):
 	return a/3600
-print hours_from_seconds(86400)
+
 def area_circle(r):
 	return math.pi*r**2
-print area_circle(5)
+
 def sphere_volume(r):
 	return (r**3)*math.pi*4/3
-print sphere_volume(5)
+
 def avg_volume(a, b):
 	return ((((a/2)**3)*math.pi*4/3)+(((b/2)**3)*math.pi*4/3))/2
-print avg_volume(10, 20)
+
 def area(a, b, c):
 	x = (a + b + c)/2
 	return math.sqrt(x*(x-a)*(x-b)*(x-c))
-print area(1, 2, 2.5)
+
 def right_align(a):
-	return " "*80+a
-print right_align("hello")
+	return " "*70+a
+
 def center(a):
-	return " "*40+a
-print center("hello")
+	return " "*35+a
+
 def msg_box(a):
-	y = "--" + "-"*len(a) + "--"
+	y = "--" + "-" * len(a) + "--"
 	return"""
 +{}+
 |  {}  |
 +{}+""".format(y, a, y)
 
-print msg_box("hello")
-print msg_box("I eat cats!")
+a = add(2, 11)
+b = add(3, 1345)
+c = sub(2, 124)
+d = sub(109357, 395890317)
+e = mul(14, 13)
+f = mul(35,9535)
+g = div(214, 3950)
+h = div(109248, 19051)
+i = hours_from_seconds(1241515)
+j = hours_from_seconds(152355215)
+k = area_circle(52)
+l = area_circle(43)
+m = sphere_volume(63)
+n = sphere_volume(12)
+o = avg_volume(187, 34)
+p = avg_volume(53, 35)
+q = area(12, 15, 12)
+r = area(45, 23, 53)
+s = right_align("noobs")
+t = right_align("ezpzz")
+u = center("blablabla")
+v = center("watever")
+print msg_box(str(a))
+print msg_box(str(b))
+print msg_box(str(c))
+print msg_box(str(d))
+print msg_box(str(e))
+print msg_box(str(f))
+print msg_box(str(g))
+print msg_box(str(h))
+print msg_box(str(i))
+print msg_box(str(j))
+print msg_box(str(k))
+print msg_box(str(l))
+print msg_box(str(m))
+print msg_box(str(n))
+print msg_box(str(o))
+print msg_box(str(p))
+print msg_box(str(q))
+print msg_box(str(r))
+print msg_box(str(s))
+print msg_box(str(t))
+print msg_box(str(u))
+print msg_box(str(v))
