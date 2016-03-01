@@ -21,7 +21,7 @@ def sphere_volume(r):
 	return (r**3)*math.pi*4/3
 
 def avg_volume(a, b):
-	return ((((a/2)**3)*math.pi*4/3)+(((b/2)**3)*math.pi*4/3))/2
+	return (sphere_volume(a)+sphere_volume(b))/2
 
 def area(a, b, c):
 	x = (a + b + c)/2
