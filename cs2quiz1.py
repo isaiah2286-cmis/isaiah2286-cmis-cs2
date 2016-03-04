@@ -15,7 +15,7 @@
 #	1: interger: 124124551, 141241241
 #	2:float: 141421.15214, 12414124.463646
 #	3:string: "adflkjafdlkjafd", "akdflnsdflknaf"
-#	4:tuple: "asdkfjlafsjafs", 35136516136
+#	4:tuple: "asdkfjlafsjafs", 35136516136------ X  -1
 #	5:boolean: True, False
 #
 
@@ -29,9 +29,9 @@
 
 #6 3pts) What are the 3 phases that every computer program has? What happens in
 #        each of them
-#	1:Plannig-  you have to have an idea that what you will be doing and what the program suppose to do
-#	2:Programing- you actually have to start putting stuff in and create a program
-#	3:Debugging: as you creating you program, you have to keep debugging your program to see what you've done wrong and fix it.
+#	1:Plannig-  you have to have an idea that what you will be doing and what the program suppose to do-------X -1
+#	2:Programing- you actually have to start putting stuff in and create a program------- X -1
+#	3:Debugging: as you creating you program, you have to keep debugging your program to see what you've done wrong and fix it.--------X -1
 #
 #Part 2: Programming (25 points)
 #Write a program that asks the user for the areas of 3 circles.
@@ -47,9 +47,19 @@
 
 # Hint: Radius is the square root of the area divided by pi
 import math
+#1 pt for header line
+#3 pt for correct formula
+#1 pt for return value
+#1 pt for parameter name
+#1 pt for function name
 def diameter(a):
 	return math.sqrt(a/math.pi)
 
+#1pt for header line
+#1pt for parameter names
+#1pt for return value
+#1pt for correct output format
+#3pt for correct use of format function
 def output(d, e, f, g):
 	return """
 Circle  Diameter
@@ -59,6 +69,12 @@ c3      {}
 TOTALS  {}
 """.format(d, e, f, g)
 
+#1pt header line
+#1pt getting input
+#1pt converting input
+#1pt for calling output function
+#2pt for correct diameter formula ------X -1
+#1pt for variable names-----X -1
 def main():
 	a = float(raw_input("Area of circle 1: "))
 	b = float(raw_input("Area of circle 2: "))
@@ -68,5 +84,9 @@ def main():
 	f = diameter(c)
 	g = d + e + f
 	print output(d, e, f, g)
+#1pt for calling main
 
 main()
+#1pt explanatory comments----- X -1
+#1pt code format
+
