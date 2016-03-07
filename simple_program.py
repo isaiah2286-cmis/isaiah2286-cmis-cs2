@@ -1,5 +1,5 @@
 
-
+#output
 def output(un, a, b, c):
 	out = """Welcome {}, thank you for choosing our company. Enjoy.
 This free trail will allow you to find things about yourself...
@@ -10,7 +10,7 @@ Your are 1/{} of earth's mass.
 
 	return out
 
-
+#input
 def main():
 	
     fn = raw_input("First Name: ")
