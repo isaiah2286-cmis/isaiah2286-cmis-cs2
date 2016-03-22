@@ -1,7 +1,7 @@
 
 
 #input
-def enter():
+def main():
 	
     fn = raw_input("First Name: ")
     ln = raw_input("Last Name: ")
@@ -12,9 +12,9 @@ def enter():
     w = raw_input("Your weight in kilogram: ")
     e = raw_input("Email address: ")
     pa = raw_input("Password: ")
-    return main(age, h, w, un)
+    return calculation(age, h, w, un)
 #processing
-def main(age, h, w, un):    
+def calculation(age, h, w, un):    
     ageinday = int(age) * 365
     nbaheight = 200 - int(h)
     earthtoyou = int(w) / 5.972 * (10**24)
@@ -30,4 +30,4 @@ Your are 1/{} of earth's mass.
 """ .format(un, ageinday, nbaheight, earthtoyou)
    
 
-enter()
+main()

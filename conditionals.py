@@ -32,8 +32,12 @@ def begining():
 
 #processing
 def questions():
-    question = random.randint(0, )
-
+    number1 = random.randint(0, 10)
+    number2 = random.randint(0, 10)
+    question = number1 * number2
+    answer = raw_input(number1, "x", number2 "= ")
+    if answer == question:
+        
 def damage():
     damage = random.random(0, 500)
     return damage
