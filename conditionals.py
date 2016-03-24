@@ -23,7 +23,7 @@
 
 
 import random
-import oneguess
+
 #input
 def begining():
     username = raw_input("Username: ")
@@ -31,21 +31,28 @@ def begining():
 	
 
 #processing
+
+def damage():
+    damage = random.random(0, 500)
+    return damage
+
 def questions():
     number1 = random.randint(0, 10)
     number2 = random.randint(0, 10)
     question = number1 * number2
-    answer = raw_input(number1, "x", number2 "= ")
+    answer = int(raw_input(number1, "x", number2 "= "))
     if answer == question:
-        
-def damage():
-    damage = random.random(0, 500)
-    return damage
-#output
-def score():
+        return True
+    else:
+        return False
+
+def dealdamage(damage):
+    if result == True:
+        enermyhp = enermy
+
     print """
     {} {} {} damage.
     You have {} Hp.    
     Enermy have {} Hp. """.format(uorenermy, deltorrecieve, damage, playerhp, enermyhp)
 
-
+#output
