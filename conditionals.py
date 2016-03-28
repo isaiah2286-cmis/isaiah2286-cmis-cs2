@@ -40,7 +40,7 @@ def questions():
     number1 = random.randint(0, 10)
     number2 = random.randint(0, 10)
     question = number1 * number2
-    answer = int(raw_input(number1, "x", number2 "= "))
+    answer = int(raw_input(number1, "x", number2, "= "))
     if answer == question:
         return True
     else:
@@ -56,3 +56,5 @@ def dealdamage(damage):
     Enermy have {} Hp. """.format(uorenermy, deltorrecieve, damage, playerhp, enermyhp)
 
 #output
+begining()
+questions()
