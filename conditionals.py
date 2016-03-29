@@ -25,36 +25,47 @@
 import random
 
 #input
-def begining():
+def welcome():
     username = raw_input("Username: ")
-    print "Welcome ", username, "! Prepare yourself for the greatest battle of your life!"
-	
+    print """Welcome {}! Prepare yourself for the greatest battle of your life!""".format(username)
+    no1 = random.randint(0, 10)
+    no2 = random.randint(0, 10)
+    print "What does ", no1, " X ", no2, "="
+    return begining(no1, no2)
+
+def begining(no1, no2):
+    question = no1 * no2
+    answer = int(raw_input())
+    if answer == question:
+        rightorwrong = "right"
+    else:
+        rightorwrong = "wrong"
+    return dealdamage(rightorwrong)
 
 #processing
 
-def damage():
-    damage = random.random(0, 500)
-    return damage
 
-def questions():
-    number1 = random.randint(0, 10)
-    number2 = random.randint(0, 10)
-    question = number1 * number2
-    answer = int(raw_input(number1, "x", number2, "= "))
-    if answer == question:
-        return True
+def dealdamage(rightorwrong):
+    damage = random.random()*4000
+    if rightorwrong == "right":
+        enermyhp = 4000 - int(damage)
+        deltorrecieve = "dealt"
+        playerhp = 4000
     else:
-        return False
-
-def dealdamage(damage):
-    if result == True:
-        enermyhp = enermy
-
-    print """
-    {} {} {} damage.
-    You have {} Hp.    
-    Enermy have {} Hp. """.format(uorenermy, deltorrecieve, damage, playerhp, enermyhp)
+        playerhp = 4000 - float(damage)
+        deltorrecieve = "received"
+        enermyhp = 4000
+    return out(playerhp, deltorrecieve, enermyhp, damage)
+   
 
 #output
-begining()
-questions()
+def out(playerhp, deltorrecieve, enermyhp, damage):
+    if enermyhp or playerhp > 0:
+        return begining()
+    print """
+    You {} {} damage.
+    You have {} Hp.    
+    Enermy have {} Hp. """.format(deltorrecieve, damage, playerhp, enermyhp)
+
+welcome()
+
