@@ -5,8 +5,8 @@
 #c) "isaiah is sexy" == "isaiah is sexy" --> True
 #
 #2) What does 'return' do?
-# it will the function when the funtion is called. It is like the output
-#
+# it will use the function when the funtion is called. It is like the output
+# so basiclly after the funtion finsih doing everything, if any other funtion want to use the vaiabe that was used in that funtion you have to return it first.
 #
 #
 #3) What are 2 ways indentation is important in python code?
@@ -18,7 +18,7 @@
 #PART 2: Reading
 #Type the values for 9 of the 12 of the variables below.
 #
-#problem1_a)-25
+#problem1_a)-36
 #problem1_b)-sqrt3
 #problem1_c)0
 #problem1_d)-5
