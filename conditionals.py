@@ -31,21 +31,22 @@ def welcome():
     no1 = random.randint(0, 10)
     no2 = random.randint(0, 10)
     print "What does ", no1, " X ", no2, "="
-    return begining(no1, no2)
+    return begining(no1, no2, username)
 
-def begining(no1, no2):
+def begining(no1, no2, username):
     question = no1 * no2
     answer = int(raw_input())
     if answer == question:
         rightorwrong = "right"
     else:
         rightorwrong = "wrong"
-    return dealdamage(rightorwrong)
+    return dealdamage(rightorwrong, username)
+
 
 #processing
 
 
-def dealdamage(rightorwrong):
+def dealdamage(rightorwrong, username):
     damage = random.random()*4000
     if rightorwrong == "right":
         enermyhp = 4000 - int(damage)
@@ -55,17 +56,44 @@ def dealdamage(rightorwrong):
         playerhp = 4000 - float(damage)
         deltorrecieve = "received"
         enermyhp = 4000
-    return out(playerhp, deltorrecieve, enermyhp, damage)
+    return out(playerhp, deltorrecieve, enermyhp, damage, username)
    
 
 #output
-def out(playerhp, deltorrecieve, enermyhp, damage):
-    if enermyhp or playerhp > 0:
-        return begining()
+def out(playerhp, deltorrecieve, enermyhp, damage, username):
     print """
     You {} {} damage.
     You have {} Hp.    
     Enermy have {} Hp. """.format(deltorrecieve, damage, playerhp, enermyhp)
+    if enermyhp <= 0:
+        print "Congratulations " + username + " ,you have defeated your enermy!"
+    elif playerhp <= 0:
+        print "You just got defeated, " + username + " ,what a noob!"
+    else:
+        return again(username, playerhp, enermyhp)
+
+#continueing the game
+def again(username, playerhp, enermyhp):
+    no1 = random.randint(0, 10)
+    no2 = random.randint(0, 10)
+    print "What does ", no1, " X ", no2, "="
+    question = no1 * no2
+    answer = int(raw_input())
+    if answer == question:
+        rightorwrong = "right"
+    else:
+        rightorwrong = "wrong"
+    return dealdamageagain(rightorwrong, username, playerhp, enermyhp)
+
+def dealdamageagain(rightorwrong, username, playerhp, enermyhp):
+    damage = random.random()*4000
+    if rightorwrong == "right":
+        enermyhp = enermyhp - int(damage)
+        deltorrecieve = "dealt"
+    else:
+        playerhp = playerhp - float(damage)
+        deltorrecieve = "received"
+    return out(playerhp, deltorrecieve, enermyhp, damage, username)
 
 welcome()
 
