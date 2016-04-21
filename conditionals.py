@@ -88,10 +88,10 @@ def again(username, playerhp, enermyhp):
 def dealdamageagain(rightorwrong, username, playerhp, enermyhp):
     damage = random.random()*4000
     if rightorwrong == "right":
-        enermyhp = enermyhp - int(damage)
+        enermyhp -= int(damage)
         deltorrecieve = "dealt"
     else:
-        playerhp = playerhp - float(damage)
+        playerhp -= float(damage)
         deltorrecieve = "received"
     return out(playerhp, deltorrecieve, enermyhp, damage, username)
 

@@ -40,20 +40,12 @@ def enterno(number, under, over):
 #processing
 def work(average):
     intaverage = int(average)
-    x = 0
-    y = 1
-    return oddoreven(intaverage, x)
-
-def oddoreven(average, intaverage, x):
-    if intaverage == x:
+    if intaverage % 2 == 0:
         oddoreven = "even"
-        return oddoreven(average, intaverage, x+2)
-    elif intaverage == y:
+    else:
         oddoreven = "odd"
-        return oddoreven(average, intaverage, x+2)
-  
     return out(average, intaverage, oddoreven)
-
+        
 #output
 def out(average, intaverage, oddoreven):
     print"""
