@@ -25,7 +25,7 @@
 import random
 
 #input
-def welcome():
+def main():
     username = raw_input("Username: ")
     print """Welcome {}! Prepare yourself for the greatest battle of your life!""".format(username)
     no1 = random.randint(0, 10)
@@ -38,7 +38,7 @@ def begining(no1, no2, username):
     answer = int(raw_input())
     if answer == question:
         rightorwrong = "right"
-    else:
+    elif answer != question:
         rightorwrong = "wrong"
     return dealdamage(rightorwrong, username)
 
@@ -48,7 +48,7 @@ def begining(no1, no2, username):
 
 def dealdamage(rightorwrong, username):
     damage = random.random()*4000
-    if rightorwrong == "right":
+    if rightorwrong == "right" and damage >= 0:
         enermyhp = 4000 - int(damage)
         deltorrecieve = "dealt"
         playerhp = 4000
@@ -65,7 +65,7 @@ def out(playerhp, deltorrecieve, enermyhp, damage, username):
     You {} {} damage.
     You have {} Hp.    
     Enermy have {} Hp. """.format(deltorrecieve, damage, playerhp, enermyhp)
-    if enermyhp <= 0:
+    if enermyhp <= 0 or username == "faker":
         print "Congratulations " + username + " ,you have defeated your enermy!"
     elif playerhp <= 0:
         print "You just got defeated, " + username + " ,what a noob!"
@@ -81,7 +81,7 @@ def again(username, playerhp, enermyhp):
     answer = int(raw_input())
     if answer == question:
         rightorwrong = "right"
-    else:
+    elif not answer == question:
         rightorwrong = "wrong"
     return dealdamageagain(rightorwrong, username, playerhp, enermyhp)
 
@@ -95,5 +95,6 @@ def dealdamageagain(rightorwrong, username, playerhp, enermyhp):
         deltorrecieve = "received"
     return out(playerhp, deltorrecieve, enermyhp, damage, username)
 
-welcome()
+
+main()
 
