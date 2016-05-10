@@ -25,4 +25,46 @@ def main():
     different = 25
     guessing(guess, guessed, different)
 
-main()
+def begin():
+    n = 0
+    compguess = 50
+    different = 25
+    count = 1
+    findthemissing(n, compguess, different, count)
+
+def findthemissing(n, compguess, different, count):
+    if count == 6:
+        print "no", n
+        n = n + 1
+        compguess = 50
+        different = 25
+        count = 1 
+        findthemissing(n, compguess, different, count)
+    else:
+        if n <= compguess:
+            compguess = compguess - different
+            different = different/2
+            count = count + 1
+            findthemissing(n, compguess, different, count)
+        elif n >= compguess:
+            compguess= compguess + different
+            different = different/2
+            count = count +1
+            findthemissing(n, compguess, different, count)
+        elif n == compuess:
+            print n
+            findthemissing(n+1, compguess, different, count)
+        elif n == 101:
+            print stop
+
+begin()
+
+
+
+
+
+
+
+
+
+#main()
