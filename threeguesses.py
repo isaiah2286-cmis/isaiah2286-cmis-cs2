@@ -82,5 +82,5 @@ def main():
         print "ERROR, pleace tpye in 1, 2 ,or 3.    "
         main()
 main()
-#no that the computer can't guess... 0,1,2,6,8, 14,18
+#no that the computer can't guess... 0,1,2,6,8, 14,18, 20m 24, 26, 30,32, 36, 38, 42, 44, 48, 49, 51,52,56,58, 
 
