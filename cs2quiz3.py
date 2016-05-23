@@ -75,5 +75,18 @@ def main():
     count = 0
     enterno(n, count)
 
-main()
+#main()
+def function1(x, n):
+    if n <=0:
+        return x
+    else:
+        return 1 + function1(x, n-1)
+def function2(a, b):
+    if a <= 0:
+        return 1 + function2(a+1, b**a)
+    else:
+        return b
 
+def this():
+    print function2(-2, -2)
+this()
