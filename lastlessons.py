@@ -27,20 +27,27 @@ def countfromxtoy(x, y):
 
 def addoddnoto0(x):
     sumofx = 0
-    while x >= 0:
-        if x % 2 != 0:
-            sumofx += x
-            x -= 2
-        else:
+    if x > 0:
+        while x > 0:
+            if x % 2 != 0:
+                sumofx += x
             x -= 1
-    while x <= 0:
-        if x % 2 != 0:
-            sumofx += x
-            x += 2
-        else:
-            x += 1
-    print sumofx 
+    elif x < 0:
+        while x < 0:
+            if x % 2 != 0:
+                sumofx += 1
+        x += 1
+    print sumofx
+            
+#addoddnoto0(-20)        
 
-addoddnoto0(10)        
+#-------------------------------------------------------------------------------
 
-
+def dots(w, h):
+    out = ""
+    x = 0
+    while x < h:
+        out += "."
+        x += 1
+    return out
+print dots(15, 10)		
